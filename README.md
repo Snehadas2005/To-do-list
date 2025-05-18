@@ -17,7 +17,7 @@ A clean, intuitive web-based task management application that helps you organize
 
 ## Demo
 
-[Live Demo](#) (Replace with your actual demo link when deployed)
+
 
 ## Getting Started
 
