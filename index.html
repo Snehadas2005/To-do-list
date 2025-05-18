@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TO-DO List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- create a container for the todo list -->
+    <div id="todo-container">
+      <!-- todo list header -->
+      <div id="header">
+        <h1>To-Do List</h1>
+        <span class="icon">📝</span>
+      </div>
+
+      <!-- create input box -->
+      <div id="todo-form">
+        <input
+          type="text"
+          class="input-item"
+          name="input_box"
+          id="input-box"
+          placeholder="Add your task"
+        />
+
+        <!-- add button  -->
+        <button id="input-button" onclick="addTask()">Add</button>
+      </div>
+
+      <!-- task list -->
+      <div>
+        <h2>Task List</h2>
+        <ul id="list-container"></ul>
+        <table id="task-table">
+          <thead>
+            <tr>
+              <th>✅</th>
+              <th>Tasks</th>
+              <th>Priority</th>
+              <th>Day</th>
+              <th>Details</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="task-table-body"></tbody>
+        </table>
+      </div>
+
+
+      <hr>
+
+      <!-- task list counter  -->
+      <div class="counter-container">
+        <div id="task-counters">
+          Completed: <span id="completed-counter">0</span> | Uncompleted:
+          <span id="uncompleted-counter">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="delete-modal" class="modal-overlay">
+        <div class="modal-content">
+            <p>Are you sure you want to delete this task?</p>
+            <div class="modal-buttons">
+            <button id="confirm-delete">Yes</button>
+            <button id="cancel-delete">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
